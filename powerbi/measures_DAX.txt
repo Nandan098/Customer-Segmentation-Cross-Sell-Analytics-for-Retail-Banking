@@ -1,0 +1,32 @@
+# DAX Measures
+
+Total Customers = DISTINCTCOUNT(CustomerSegments[customer_id])
+
+Average Annual Income = AVERAGE(CustomerSegments[annual_income])
+
+Average Account Balance = AVERAGE(CustomerSegments[account_balance])
+
+Average Monthly Transactions = AVERAGE(CustomerSegments[monthly_transaction_count])
+
+Average Monthly Transaction Amount = AVERAGE(CustomerSegments[monthly_transaction_amount])
+
+Average Digital Usage = AVERAGE(CustomerSegments[digital_transaction_ratio])
+
+Average Credit Utilization = AVERAGE(CustomerSegments[credit_utilization_ratio])
+
+Average Investment Amount = AVERAGE(CustomerSegments[investment_amount])
+
+Investment Penetration % =
+DIVIDE(
+    CALCULATE([Total Customers], CustomerSegments[investment_amount] > 0),
+    [Total Customers]
+)
+
+Active Customers % =
+DIVIDE(
+    CALCULATE([Total Customers], CustomerSegments[months_inactive_12_mon] <= 2),
+    [Total Customers]
+)
+
+Affluent Under-Engaged Customers =
+CALCULATE([Total Customers], CustomerSegments[segment_name] = "Affluent Under-Engaged")

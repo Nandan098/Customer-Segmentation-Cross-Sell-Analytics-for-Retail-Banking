@@ -1,0 +1,38 @@
+Field,Type,Definition,Use
+customer_id,Identifier,Synthetic customer identifier,Profile only
+age,Profile,Customer age,Profile only
+gender,Profile,Synthetic gender category,Not used for clustering
+city_tier,Profile,Synthetic city tier,Not used for clustering
+occupation,Profile,Synthetic occupation category,Not used for clustering
+annual_income,Financial,Estimated annual income,Financial Capacity
+account_balance,Financial,Account balance,Financial Capacity
+monthly_transaction_count,Behavior,Monthly transaction frequency,Engagement
+avg_transaction_value,Behavior,Average transaction value,Supporting
+monthly_transaction_amount,Behavior,Monthly transaction amount,Engagement
+credit_card_spend,Behavior,Monthly card spend,Supporting
+credit_limit,Credit,Credit limit,Supporting
+credit_utilization_ratio,Credit,Credit used / limit,Credit Dependence
+loan_amount,Credit,Loan exposure proxy,Credit Dependence
+loan_term_months,Credit,Loan term,Supporting
+emi_amount,Credit,Estimated EMI,Credit Dependence
+investment_amount,Wealth,Investment amount proxy,Financial Capacity
+insurance_value,Wealth,Insurance value proxy,Supporting
+digital_transaction_ratio,Digital,Share of transactions conducted digitally,Digital Behavior
+upi_transaction_share,Digital,Share of transactions using UPI,Digital Behavior
+monthly_cash_withdrawals,Behavior,Monthly cash withdrawals,Supporting
+monthly_branch_visits,Behavior,Monthly branch visits,Supporting
+months_with_bank,Relationship,Customer tenure,Supporting
+total_relationship_count,Relationship,Number of banking relationships,Engagement (low weight)
+months_inactive_12_mon,Engagement,Inactive months in last 12 months,Engagement
+customer_service_calls,Service,Service contact count,Supporting
+salary_credit_frequency,Income Flow,Salary-credit regularity proxy,Supporting
+card_category,Product,Synthetic card category,Profile only
+monthly_income,Engineered,Annual income / 12,Derived
+loan_to_income_ratio,Engineered,Loan / annual income,Derived
+emi_to_monthly_income_ratio,Engineered,EMI / monthly income,Derived
+card_spend_share,Engineered,Card spend / monthly transaction amount,Derived
+investment_to_income_ratio,Engineered,Investment / income,Derived
+balance_to_income_ratio,Engineered,Balance / income,Derived
+engagement_recency_score,Engineered,1 - inactivity/12,Derived
+segment_id,Model output,K-Means cluster ID,Output
+segment_name,Model output,Post-cluster business label,Output

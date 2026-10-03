@@ -1,0 +1,9 @@
+Check,Before,After
+Input rows,100000,100000
+Input columns,28,35
+Missing cells,0,0
+Duplicate rows,0,0
+Duplicate customer IDs,0,0
+Age range valid,1,1
+Income positive,1,1
+Utilization 0-1,1,1
